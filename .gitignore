@@ -1,0 +1,50 @@
+# =======================================================================
+# Git Ignore - Smart Meter JSON Editor
+# =======================================================================
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Build and PyInstaller artifacts
+build/
+dist/
+*.spec
+
+# Compiled Executables and Distribution Bundles
+*.exe
+*.zip
+*.tar
+*.gz
+
+# Portable runtime and virtual environments
+runtime/
+venv/
+env/
+.venv/
+
+# =======================================================================
+# COMPANY & UTILITY DATA PROTECTION (STRICTLY EXCLUDED)
+# All real production smart meter files and test outputs are ignored
+# =======================================================================
+*.json
+!samples/*.json
+testing by user/
+output/
+scratch/
+browser_evidence/
+.user_uploaded/
+.system_generated/
+
+# Office / Excel temporary lock files
+~$*.xlsx
+~$*.xls
+_temp_*
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

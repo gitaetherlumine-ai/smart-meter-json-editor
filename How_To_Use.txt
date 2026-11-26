@@ -1,0 +1,55 @@
+========================================================================
+             SMART METER JSON FILE EDITOR - TEAM QUICK START
+========================================================================
+
+ABOUT:
+This tool allows editing DLMS/COSEM Smart Meter interval data with 100% 
+zero schema drift (preserving all ~50+ other electrical parameters, 
+voltages, currents, PF, THD, and compact JSON structure).
+
+HOW TO RUN:
+------------------------------------------------------------------------
+Method 1 (Standalone Executable - Recommended):
+  1. Double-click "SmartMeterJsonEditor.exe".
+  2. Your web browser will open automatically to the portal:
+     http://127.0.0.1:8080/
+  * Note: No Python installation required!
+  * If Windows SmartScreen shows a warning, click "More info" -> "Run anyway".
+
+Method 2 (Script Launcher - If Python is installed):
+  1. Double-click "Start_Editor.vbs" (silent background launch)
+     OR "run_editor.bat" (shows console log).
+
+HOW TO USE:
+------------------------------------------------------------------------
+Step 1: Select Source JSON
+  - Click "Browse File" or "Folder" to select the JSON file(s) to edit.
+
+Step 2: Download 9-Column Change Template (.xlsx)
+  - Click "Download Template (.xlsx)".
+  - The downloaded Excel sheet contains 9 columns pre-populated from the JSON:
+    Col 1: JSON File Name
+    Cols 2-5 [BEFORE]: Meter Number, Date & Time, Import kWh, Export kWh
+    Cols 6-9 [AFTER]:  Meter Number, Date & Time, Import kWh, Export kWh
+
+Step 3: Edit the [AFTER] Columns in Excel
+  - In Excel, change Columns 6-9 to your desired values:
+    * You can change the Meter Number to any new Meter ID.
+    * You can edit Import kWh and Export kWh.
+  - Save the Excel file.
+
+Step 4: Upload Excel Changes
+  - Click "Upload Excel Changes", select your edited Excel file, and click Apply.
+  - The portal updates the values and highlights modified cells in amber.
+
+Step 5: Save Output
+  - Click "Save Output (*__Modified.json)" to save the updated JSON into
+    the "output/" folder with the exact requested naming convention:
+    e.g. sample_load_survey__Modified.json
+
+Step 6: Export Reports
+  - Click "Export Data" to download:
+    * Export Source Data (CSV)
+    * Export Output Data (CSV)
+    * Export Before & After Comparison (CSV)
+========================================================================
